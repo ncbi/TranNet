@@ -23,7 +23,7 @@ M=ProjectedGradient(tEXP, nEXP)  #Find optimal transition map M (sparse matrix p
 (M.T).to_csv('Transition_Matrix_M.csv') # Save transition matrix M as cvs file (Direction of interactions from row to columns in saved matrix) 
 RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulatory potentials for genes (Total outgoing effects from each genes)
 ```
-#### Results of the analysis on five types of cancer data.
+#### Results of the analysis on five types of cancer data sets.
 The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data 
 
--[TranNet Results](results)
+-[TranNet Code](results)
