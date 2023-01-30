@@ -23,7 +23,10 @@ M=ProjectedGradient(tEXP, nEXP)  #Find optimal transition map M (sparse matrix p
 (M.T).to_csv('Transition_Matrix_M.csv') # Save transition matrix M as cvs file (Direction of interactions from row to columns in saved matrix) 
 RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulatory potentials for genes (Total outgoing effects from each genes)
 ```
+#### Python [Package](TranNet Code) 
+
+* The TranNet method is implemented in python and the codes are available as [Python Code](TranNet Code/TranNet.py) and [Jupyter Notebook module](TranNet Code/TranNet.ipynb).
+
 #### Results of the analysis on five types of cancer data sets.
 The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data 
 
-* The TranNet method is implemented in python and the codes are available as [Python Code](TranNet Code/TranNet.py) and [Jupyter Notebook module](TranNet Code/TranNet.ipynb).
