@@ -25,4 +25,4 @@ RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulat
 ```
 #### Results of the analysis on five types of cancer data.
 The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data 
-- [Results](results): As result of the analysis in the two cancer data sets, the weight matrices (.cvs files) inferred to represent the directed interactions among genes and signatures, and subnetwork figures (.html files) representing the interaction between signatures and their up and down stream genes.   
+- [TranNet Results](results): As result of the analysis in the two cancer data sets, the weight matrices (.cvs files) inferred to represent the directed interactions among genes and signatures, and subnetwork figures (.html files) representing the interaction between signatures and their up and down stream genes.   
