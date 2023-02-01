@@ -8,11 +8,16 @@ Sample matched gene expression matrices in Normal and Tumor respectively as cvs 
 nEXP=pd.read_csv('NormalData.csv', index_col=0) #Load Normal expression data
 tEXP=pd.read_csv('TumorData.csv', index_col=0)  #Load Tumor expression data
 ```
-#### Run TranNet
+#### How to Run TranNet
+
+ProjectedGradient procidure takes two matrices discribed above and return the transtion weight matrix as output
 ```
 M=ProjectedGradient(tEXP, nEXP)  #Find optimal transition map M (sparse matrix presenting the interaction between genes across 2 conditions)
 ```
 #### Output of TranNet
+
+Save result as Transtition weight matrix and genes ranked based on their regulatory potential scores
+
 ```
 (M.T).to_csv('Transition_Matrix_M.csv') # Save transition matrix M as cvs file (Direction of interactions from row to columns in saved matrix) 
 RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulatory potentials for genes (Total outgoing effects from each genes)
