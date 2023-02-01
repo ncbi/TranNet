@@ -1,20 +1,21 @@
 # TranNet
-TranNet: A computational method infers the gene-gene inteaction across normal and cancer tissues Tumors
+TranNet: A computational method infers the gene-gene interaction across normal and cancer tissues Tumors
 #### Pre-required installations before running TranNet
 Python libraries math, pandas, numpy and sklearn are prerequired to be installed before running TranNet
 #### Input Data to TranNet
 Sample matched gene expression matrices in Normal and Tumor respectively as cvs file (Column names are genes whereas row names are samples) 
+We recommend users to have their data standardized for each genes before running the code.
 ```
 nEXP=pd.read_csv('NormalData.csv', index_col=0) #Load Normal expression data
 tEXP=pd.read_csv('TumorData.csv', index_col=0)  #Load Tumor expression data
 ```
 #### How to Run TranNet
-ProjectedGradient procidure takes two matrices discribed above and return the transtion weight matrix as output
+ProjectedGradient procedure takes two matrices described above and return the transition weight matrix as output
 ```
 M=ProjectedGradient(tEXP, nEXP)  #Find optimal transition map M (sparse matrix presenting the interaction between genes across 2 conditions)
 ```
 #### Output of TranNet
-Save result as Transtition weight matrix and genes ranked based on their regulatory potential scores
+Save result as the transitition weight matrix and genes ranked based on their regulatory potential scores
 ```
 (M.T).to_csv('Transition_Matrix_M.csv') # Save transition matrix M as cvs file (Direction of interactions from row to columns in saved matrix) 
 RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulatory potentials for genes (Total outgoing effects from each genes)
@@ -24,6 +25,5 @@ RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulat
 
 #### Results of the analysis on five types of cancer data sets [Result](result).
 The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data. 
-* The gene lists sorted based on thier score of regulitary potentials [Regulatory Potentials](result/Additional_File_1.xlsx). The genes ranked in higher order have more contribution effect on the transition network.
-* GO terms enriched for the sorted list of redictor genes [GO terms for regulators](result/Additional_File_3.xlsx). The enriched GO terms are assumed as the representation of biological processes involved in or contributing to the transtion.
-* GO terms enriched for the sorted list of predicted genes [GO terms for targets](result/Additional_File_2.xlsx). The enriched GO terms are assumed as the representation of biological processes influnced by the transtion.
+* The gene lists sorted based on their score of regulatory potentials [Regulatory Potentials](result/Additional_File_1.xlsx). The genes ranked in higher order have more contribution effect on the transition network.
+* GO terms enriched for the sorted list of predictor genes [GO terms for regulators](result/Additional_File_3.xlsx). The enriched GO terms are assumed as the representation of biological processes involved in or contributing to the transition.
