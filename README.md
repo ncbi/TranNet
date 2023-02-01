@@ -3,7 +3,7 @@ TranNet: A computational method infers the gene-gene interaction across normal a
 #### Pre-required installations before running TranNet
 Python libraries math, pandas, numpy and sklearn are prerequired to be installed before running TranNet
 #### Input Data to TranNet
-Sample matched gene expression matrices in Normal and Tumor respectively as cvs file (Column names are genes whereas row names are samples) 
+Two matrices represnting sample matched gene expression in Normal and Tumor respectively as cvs file (Column names are genes whereas row names are samples) 
 We recommend users to have their data standardized for each genes before running the code.
 ```
 nEXP=pd.read_csv('NormalData.csv', index_col=0) #Load Normal expression data
