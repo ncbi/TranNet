@@ -15,7 +15,7 @@ ProjectedGradient procedure takes two matrices described above and return the tr
 M=ProjectedGradient(tEXP, nEXP)  #Find optimal transition map M (sparse matrix presenting the interaction between genes across 2 conditions)
 ```
 #### Output of TranNet
-Save result as the transitition weight matrix and genes ranked based on their regulatory potential scores
+As result, save the transitition weight matrix and list of genes ranked based on their regulatory potential scores
 ```
 (M.T).to_csv('Transition_Matrix_M.csv') # Save transition matrix M as cvs file (Direction of interactions from row to columns in saved matrix) 
 RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulatory potentials for genes (Total outgoing effects from each genes)
