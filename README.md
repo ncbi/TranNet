@@ -25,6 +25,6 @@ RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulat
 
 #### Results of the analysis on five types of cancer data sets [Result](result).
 The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data. 
-* The gene lists sorted based on their score of regulatory potentials [Regulatory Potentials](result/Additional_File_1.xlsx). The genes ranked in higher order have more contribution effect on the transition network.
-* GO terms enriched for the sorted list of predictor genes [GO terms for regulators](result/Additional_File_3.xlsx). The enriched GO terms are assumed as the representation of biological processes involved in or contributing to the transition.
-* GO terms enriched for the sorted list of predicted genes [GO terms for targets](result/Additional_File_2.xlsx). The enriched GO terms are assumed as the representation of biological processes influenced by the transition.
+* The gene lists sorted based on their score of regulatory potentials [Regulatory Potentials](result/Genes_Regulatory_Potentials.xlsx). The genes ranked in higher order have more contribution effect on the transition network.
+* GO terms enriched for the sorted list of predictor genes [GO terms for regulators](result/GO_terms_Predictor_Genes.xlsx). The enriched GO terms are assumed as the representation of biological processes involved in or contributing to the transition.
+* GO terms enriched for the sorted list of predicted genes [GO terms for targets](result/GO_terms_Well_Predicted_Genes.xlsx). The enriched GO terms are assumed as the representation of biological processes influenced by the transition.
