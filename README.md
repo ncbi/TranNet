@@ -9,7 +9,7 @@ We recommend users to have their data standardized for each genes before running
 nEXP=pd.read_csv('NormalData.csv', index_col=0) #Load Normal expression data
 tEXP=pd.read_csv('TumorData.csv', index_col=0)  #Load Tumor expression data
 ```
-#### How to Run TranNet
+#### To Run TranNet
 ProjectedGradient procedure takes two matrices described above and return the transition weight matrix as output
 ```
 M=ProjectedGradient(tEXP, nEXP)  #Find optimal transition map M (sparse matrix presenting the interaction between genes across 2 conditions)
