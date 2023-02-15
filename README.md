@@ -24,6 +24,7 @@ RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulat
 * The TranNet method is implemented in python and the codes are available as [Python Code](code/TranNet.py) and [Jupyter Notebook module](code/TranNet.ipynb).
 
 #### Data sets for five cancers [Data](code)
+The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data.
 
 #### Results of the analysis on five cancer data sets [Result](result)
 The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data. 
