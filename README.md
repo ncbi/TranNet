@@ -1,5 +1,5 @@
 # TranNet
-TranNet: A computational method infers the gene-gene interaction across normal and cancer tissues Tumors
+TranNet: A computational method for inferring the gene-gene interaction across normal and cancer tissues
 #### Pre-required installations before running TranNet
 Python libraries math, pandas, numpy and sklearn are prerequired to be installed before running TranNet
 #### Input Data to TranNet
