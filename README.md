@@ -21,7 +21,7 @@ As result, save the transitition weight matrix and list of genes ranked based on
 RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulatory potentials for genes (Total outgoing effects from each genes)
 ```
 #### Python [Package](code) 
-* The TranNet method is implemented in python and the codes are available as [Python Code](code/TranNet.py) and [Jupyter Notebook module](code/TranNet.ipynb).
+* The TranNet method is implemented in python and the codes are available as [Python Code](code/TranNet.py) and [Jupyter Notebook](code/TranNet.ipynb) modules.
 
 #### Data sets for five cancers [Data](data)
 For each of the five cancer data sets (BRCA, LUAD, LUSC, PRAD and LIHC), the gene expression matrix is standardized with z-score for each gene (columns) and in control and tumor samples respectively and first half of samples (first half of rows in the gene expression matrix are control samples) represent control samples while the last half represents tumor samples (last half of rows in the gene expression matrix are tumor samples).
