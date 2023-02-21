@@ -24,10 +24,11 @@ RP=(abs(M)).sum(axis=0).sort_values(ascending=False)  #Compute scores of regulat
 * The TranNet method is implemented in python and the codes are available as [Python Code](code/TranNet.py) and [Jupyter Notebook](code/TranNet.ipynb) modules.
 
 #### Data sets for five cancers [Data](data)
-For each of the five cancer data sets (BRCA, LUAD, LUSC, PRAD and LIHC), the gene expression matrix is standardized with z-score for each gene (columns) in control and tumor samples respectively. First half of samples (first half of rows in the gene expression matrix are control samples) represent control samples while the last half represents tumor samples (last half of rows in the gene expression matrix are tumor samples).
+For each of the five cancer data sets (BRCA, LUAD, LUSC, PRAD and LIHC), the gene expression matrix is standardized with z-score for each gene (columns) in control and tumor samples respectively. For the gene expression for each cancer, first half of samples (first half of rows in the gene expression matrix are control samples) represents control samples while the last half represents tumor samples (last half of rows in the gene expression matrix are tumor samples).
 
 #### Results of the analysis on five cancer data sets [Result](result)
 The following files proves the results for the analysis on BRCA, LUAD, LUSC, PRAD and LIHC cancer data. 
 * Lists of the gene and principal components sorted based on their score of regulatory potentials [Regulatory Potentials](result/Genes_Regulatory_Potentials.xlsx). The genes ranked in higher order have more contribution effect on the transition network.
 * GO terms enriched for the sorted list of predictor genes [GO terms for predictors](result/GO_terms_Predictor_Genes.xlsx). The enriched GO terms are assumed as the representation of biological processes, molecular functions and cellular components involved in or contributing to the transition.
 * GO terms enriched for the sorted list of predicted genes [GO terms for targets](result/GO_terms_Well_Predicted_Genes.xlsx). The enriched GO terms are assumed as the representation of biological processes, molecular functions and cellular components influenced by the transition.
+* Lists of genes whose expression in normal samples is identified as the predictor its corresponding expression in tumor.  
